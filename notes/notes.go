@@ -22,15 +22,15 @@ func init() {
 	CharToNote = make(map[rune]uintptr)
 
 	CharToNote['a'] = C5
-	CharToNote['s'] = Db5
-	CharToNote['d'] = D5
-	CharToNote['f'] = Eb5
-	CharToNote['g'] = E5
-	CharToNote['h'] = F5
-	CharToNote['j'] = Gb5
-	CharToNote['k'] = G5
-	CharToNote['l'] = Ab5
-	CharToNote['i'] = A5
-	CharToNote['o'] = Bb5
-	CharToNote['p'] = B5
+	CharToNote['w'] = Db5
+	CharToNote['s'] = D5
+	CharToNote['e'] = Eb5
+	CharToNote['d'] = E5
+	CharToNote['f'] = F5
+	CharToNote['t'] = Gb5
+	CharToNote['g'] = G5
+	CharToNote['y'] = Ab5
+	CharToNote['h'] = A5
+	CharToNote['u'] = Bb5
+	CharToNote['j'] = B5
 }
