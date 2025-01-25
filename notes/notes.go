@@ -15,3 +15,22 @@ const (
 	Bb5 uintptr = 932
 	B5  uintptr = 987
 )
+
+var CharToNote map[rune]uintptr
+
+func init() {
+	CharToNote = make(map[rune]uintptr)
+
+	CharToNote['a'] = C5
+	CharToNote['s'] = Db5
+	CharToNote['d'] = D5
+	CharToNote['f'] = Eb5
+	CharToNote['g'] = E5
+	CharToNote['h'] = F5
+	CharToNote['j'] = Gb5
+	CharToNote['k'] = G5
+	CharToNote['l'] = Ab5
+	CharToNote['i'] = A5
+	CharToNote['o'] = Bb5
+	CharToNote['p'] = B5
+}
