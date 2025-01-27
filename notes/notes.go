@@ -2,24 +2,24 @@ package notes
 
 // frequency in hertz
 const (
-	C5  uintptr = 523
-	Db5 uintptr = 554
-	D5  uintptr = 587
-	Eb5 uintptr = 622
-	E5  uintptr = 659
-	F5  uintptr = 698
-	Gb5 uintptr = 740
-	G5  uintptr = 784
-	Ab5 uintptr = 831
-	A5  uintptr = 880
-	Bb5 uintptr = 932
-	B5  uintptr = 987
+	C5  float64 = 523
+	Db5 float64 = 554
+	D5  float64 = 587
+	Eb5 float64 = 622
+	E5  float64 = 659
+	F5  float64 = 698
+	Gb5 float64 = 740
+	G5  float64 = 784
+	Ab5 float64 = 831
+	A5  float64 = 880
+	Bb5 float64 = 932
+	B5  float64 = 987
 )
 
-var CharToNote map[rune]uintptr
+var CharToNote map[rune]float64
 
 func init() {
-	CharToNote = make(map[rune]uintptr)
+	CharToNote = make(map[rune]float64)
 
 	CharToNote['a'] = C5
 	CharToNote['w'] = Db5
