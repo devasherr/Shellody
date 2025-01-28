@@ -14,12 +14,15 @@ const (
 	A5  float64 = 880
 	Bb5 float64 = 932
 	B5  float64 = 987
+	C6  float64 = 1046
 )
 
 var CharToNote map[rune]float64
+var KeyMap map[string]string
 
 func init() {
 	CharToNote = make(map[rune]float64)
+	KeyMap = make(map[string]string)
 
 	CharToNote['a'] = C5
 	CharToNote['w'] = Db5
@@ -33,4 +36,19 @@ func init() {
 	CharToNote['h'] = A5
 	CharToNote['u'] = Bb5
 	CharToNote['j'] = B5
+	CharToNote['k'] = C6
+
+	KeyMap["a"] = "C"
+	KeyMap["w"] = "C#"
+	KeyMap["s"] = "D"
+	KeyMap["e"] = "D#"
+	KeyMap["d"] = "E"
+	KeyMap["f"] = "F"
+	KeyMap["t"] = "F#"
+	KeyMap["g"] = "G"
+	KeyMap["y"] = "G#"
+	KeyMap["h"] = "A"
+	KeyMap["u"] = "A#"
+	KeyMap["j"] = "B"
+	KeyMap["k"] = "C"
 }

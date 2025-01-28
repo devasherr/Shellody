@@ -63,7 +63,7 @@ func main() {
 	whiteKeyPressedStyle := whiteKeyStyle.Background(lipgloss.Color("220"))
 	blackKeyPressedStyle := blackKeyStyle.Background(lipgloss.Color("220"))
 
-	whiteKeys := []string{"a", "s", "d", "f", "g", "h", "j"}
+	whiteKeys := []string{"a", "s", "d", "f", "g", "h", "j", "k"}
 	blackKeys := []string{"w", "e", "", "t", "y", "u"}
 
 	keyStyles := make(map[rune]lipgloss.Style)
@@ -84,14 +84,14 @@ func main() {
 			if pressedKeys[rune(key[0])] {
 				style = whiteKeyPressedStyle
 			}
-			pianoRow = append(pianoRow, style.Render(key))
+			pianoRow = append(pianoRow, style.Render(notes.KeyMap[key]))
 
 			if i < len(blackKeys) && blackKeys[i] != "" {
 				style := blackKeyStyle
 				if pressedKeys[rune(blackKeys[i][0])] {
 					style = blackKeyPressedStyle
 				}
-				pianoRow = append(pianoRow, style.Render(blackKeys[i]))
+				pianoRow = append(pianoRow, style.Render(notes.KeyMap[blackKeys[i]]))
 			}
 		}
 		return lipgloss.JoinHorizontal(lipgloss.Top, pianoRow...)
